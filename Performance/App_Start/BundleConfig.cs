@@ -23,9 +23,12 @@ namespace Performance
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css",
-                                                                 "~/Content/bootstrap.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(//"~/Content/site.css",
+                                                                 "~/Content/bootstrap.css",
+                                                                 "~/Content/main.css"));
 
+            bundles.Add(new ScriptBundle("~/bundles/oldIEBrowsersSupport").Include( "~/Scripts/html5shiv.js",
+                                                                                    "~/Scripts/respond.js"));
         }
     }
 }

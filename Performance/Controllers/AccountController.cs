@@ -34,7 +34,7 @@ namespace Performance.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            if (VerifyUser(model.UserName, model.Password))
+            if (model.IsValid(model.UserName, model.Password))
             {
                 FormsAuthentication.SetAuthCookie(model.UserName, false);
                 return RedirectToLocal(returnUrl);
@@ -42,23 +42,6 @@ namespace Performance.Controllers
 
             return View(model);
         }
-
-        private Boolean VerifyUser(string _username, string _password)
-        {
-            Boolean validUser = false;
-            try
-            {
-                if (_username == "admin" && _password == "123")
-                {
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-            }
-            return validUser;
-        }
-
 
         //
         // POST: /Account/LogOff

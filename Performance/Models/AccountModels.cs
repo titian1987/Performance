@@ -6,6 +6,10 @@ using System.Data.Entity;
 using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Data;
+using System.Data.SqlClient;
+
+using Performance.Helpers;
 
 namespace Performance.Models
 {
@@ -38,5 +42,34 @@ namespace Performance.Models
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
+
+        public bool IsValid(string _username, string _password)
+        {
+            using (var cn = new SqlConnection(Global.DBConnectionString))
+            {
+                string sql = Global.DBSelectWebUser;
+                var cmd = new SqlCommand(sql, cn);
+                cmd.Parameters
+                    .Add(new SqlParameter("@username", SqlDbType.NVarChar))
+                    .Value = _username;
+                cmd.Parameters
+                    .Add(new SqlParameter("@password", SqlDbType.NVarChar))
+                    .Value = DBHelper.SHA1.Encode(_password);
+                cn.Open();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Dispose();
+                    cmd.Dispose();
+                    return true;
+                }
+                else
+                {
+                    reader.Dispose();
+                    cmd.Dispose();
+                    return false;
+                }
+            }
+        }
     }
 }

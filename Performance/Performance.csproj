@@ -186,7 +186,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\WebUserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\PerformanceContext.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -194,7 +196,6 @@
     <Compile Include="Helpers\DBHelper.cs" />
     <Compile Include="Helpers\Global.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\BaseEnums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -248,12 +249,23 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_html5shiv.cshtml" />
+    <Content Include="Views\WebUser\Index.cshtml" />
+    <Content Include="Views\WebUser\Details.cshtml" />
+    <Content Include="Views\WebUser\Create.cshtml" />
+    <Content Include="Views\WebUser\Edit.cshtml" />
+    <Content Include="Views\WebUser\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Performance.Data\Performance.Data.csproj">
+      <Project>{156ce57e-53b3-4a08-91ae-461402e52e3f}</Project>
+      <Name>Performance.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

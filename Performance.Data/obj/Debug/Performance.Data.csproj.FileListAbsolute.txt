@@ -1,0 +1,4 @@
+C:\Users\yli\Documents\Visual Studio 2013\Projects\Performance\Performance.Data\bin\Debug\Performance.Data.dll
+C:\Users\yli\Documents\Visual Studio 2013\Projects\Performance\Performance.Data\bin\Debug\Performance.Data.pdb
+C:\Users\yli\Documents\Visual Studio 2013\Projects\Performance\Performance.Data\obj\Debug\Performance.Data.dll
+C:\Users\yli\Documents\Visual Studio 2013\Projects\Performance\Performance.Data\obj\Debug\Performance.Data.pdb

@@ -23,27 +23,6 @@ namespace Performance.Controllers
         }
 
         //
-        // GET: /WebUser/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            WebUser webuser = db.WebUsers.Find(id);
-            if (webuser == null)
-            {
-                return HttpNotFound();
-            }
-            return View(webuser);
-        }
-
-        //
-        // GET: /WebUser/Create
-
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        //
         // POST: /WebUser/Create
 
         [HttpPost]
@@ -60,35 +39,7 @@ namespace Performance.Controllers
             return View(webuser);
         }
 
-        //
-        // GET: /WebUser/Edit/5
-
-        public ActionResult Edit(int id = 0)
-        {
-            WebUser webuser = db.WebUsers.Find(id);
-            if (webuser == null)
-            {
-                return HttpNotFound();
-            }
-            return View(webuser);
-        }
-
-        //
-        // POST: /WebUser/Edit/5
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(WebUser webuser)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(webuser).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(webuser);
-        }
-
+        
         //
         // GET: /WebUser/Delete/5
 

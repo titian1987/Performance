@@ -229,6 +229,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\webuser.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\npm.js" />
@@ -250,10 +251,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_html5shiv.cshtml" />
     <Content Include="Views\WebUser\Index.cshtml" />
-    <Content Include="Views\WebUser\Details.cshtml" />
-    <Content Include="Views\WebUser\Create.cshtml" />
-    <Content Include="Views\WebUser\Edit.cshtml" />
-    <Content Include="Views\WebUser\Delete.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />

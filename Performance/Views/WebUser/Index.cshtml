@@ -1,45 +1,65 @@
 ﻿@model IEnumerable<Performance.Data.Entity.WebUser>
 
-@{
-    ViewBag.Title = "Index";
-}
+<div class="row col-lg-12 margin50">
 
-<h2>Index</h2>
+    <h4 class="margin10 col-xs-12">All users</h4>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Role)
-        </th>
-        <th></th>
-    </tr>
+    <p class="col-xs-12">
+        <a href="#" id="createWebUser" class="btn btn-default pull-right">New User</a>
+    </p>
+    <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 pull-right margin10-btm" id="newWebUserTable">
+        <table class="table table-striped font12">
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" class="form-control input-sm" placeholder="User name" id="newWebUserName" /></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" class="form-control input-sm" placeholder="Password" id="newWebUserPassword" /></td>
+            </tr>
+            <tr>
+                <td>Repeat Password:</td>
+                <td><input type="password" class="form-control input-sm" placeholder="Repeat new password" id="newWebUserPasswordConfirm" /></td>
+            </tr>
+            <tr>
+                <td>Role:</td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="pull-right">
+            <a href="#" id="saveCreateWebUser" class="btn btn-sm btn-danger">Save</a>
+            <a href="#" id="cancelCreateWebUser" class="btn btn-sm btn-default">Cencel</a>
+        </div>
+    </div>
+    
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Role)
+                </th>
+                <th></th>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Role)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </td>
 
-</table>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Role)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", "WebUser", new { id = item.Id }, new { @class = "btn btn-sm btn-danger pull-right" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

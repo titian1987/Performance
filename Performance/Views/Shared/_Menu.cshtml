@@ -1,0 +1,28 @@
+﻿@if (Request.IsAuthenticated){
+    
+    @helper ActiveItem(string actionName, string controllerName, string areaName)
+    {
+        if (ViewContext.RouteData.Values["action"].ToString() == actionName &&
+                ViewContext.RouteData.Values["controller"].ToString() == controllerName &&
+                (ViewContext.RouteData.DataTokens["area"] == null || ViewContext.RouteData.DataTokens["area"].ToString() == areaName))
+        {
+            @:active
+        }
+    }
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">Performance</a>
+            </div>
+            <div class="navbar-collapse collapse  navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="@ActiveItem("Index", "WebUser", null)">@Html.ActionLink("Manage user", "Index", "WebUser")</li>
+                    <li class="@ActiveItem("Index", "Home", null)">@Html.ActionLink("Log off", "LogOff", "Account")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+}

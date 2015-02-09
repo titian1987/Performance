@@ -1,0 +1,85 @@
+﻿@model Performance.Data.Entity.HoldingTable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>HoldingTable</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SecurityId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecurityId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SecurityName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecurityName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PortfolioId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PortfolioId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PortfolioName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PortfolioName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModelPortfolioId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModelPortfolioId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModelPortfolioName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModelPortfolioName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nominal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nominal)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MarketValue)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MarketValue)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CashFlow)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CashFlow)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -19,6 +19,8 @@
             </div>
             <div class="navbar-collapse collapse  navbar-right">
                 <ul class="nav navbar-nav">
+                    <li class="@ActiveItem("Index", "InvestmentTree", null)">@Html.ActionLink("Investment Tree", "Index", "InvestmentTree")</li>
+                    <li class="@ActiveItem("Index", "HoldingTable", null)">@Html.ActionLink("Hodling Table", "Index", "HoldingTable")</li>
                     <li class="@ActiveItem("Index", "WebUser", null)">@Html.ActionLink("Manage user", "Index", "WebUser")</li>
                     <li class="@ActiveItem("Index", "Home", null)">@Html.ActionLink("Log off", "LogOff", "Account")</li>
                 </ul>

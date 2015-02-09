@@ -1,0 +1,43 @@
+﻿@model Performance.Data.Entity.InvestmentTree
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>InvestmentTree</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TreeId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TreeId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TreeName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TreeName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ParentId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SplitType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SplitType)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

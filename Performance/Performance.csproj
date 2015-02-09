@@ -186,6 +186,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HoldingTableController.cs" />
+    <Compile Include="Controllers\InvestmentTreeController.cs" />
     <Compile Include="Controllers\WebUserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\PerformanceContext.cs" />
@@ -195,7 +197,10 @@
     </Compile>
     <Compile Include="Helpers\DBHelper.cs" />
     <Compile Include="Helpers\Global.cs" />
+    <Compile Include="Helpers\Util\Node.cs" />
+    <Compile Include="Helpers\Util\Tree.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\DisplayModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +238,8 @@
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="SQL\HoldingTable.sql" />
+    <Content Include="SQL\InvestmentTree.sql" />
     <Content Include="SQL\WebUser.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -252,6 +259,17 @@
     <Content Include="Views\Shared\_html5shiv.cshtml" />
     <Content Include="Views\WebUser\Index.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\HoldingTable\Index.cshtml" />
+    <Content Include="Views\HoldingTable\Details.cshtml" />
+    <Content Include="Views\HoldingTable\Create.cshtml" />
+    <Content Include="Views\HoldingTable\Edit.cshtml" />
+    <Content Include="Views\HoldingTable\Delete.cshtml" />
+    <Content Include="Views\InvestmentTree\Index.cshtml" />
+    <Content Include="Views\InvestmentTree\Details.cshtml" />
+    <Content Include="Views\InvestmentTree\Create.cshtml" />
+    <Content Include="Views\InvestmentTree\Edit.cshtml" />
+    <Content Include="Views\InvestmentTree\Delete.cshtml" />
+    <Content Include="Views\HoldingTable\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />

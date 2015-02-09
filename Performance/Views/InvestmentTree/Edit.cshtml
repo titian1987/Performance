@@ -1,0 +1,62 @@
+﻿@model Performance.Data.Entity.InvestmentTree
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>InvestmentTree</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TreeId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TreeId)
+            @Html.ValidationMessageFor(model => model.TreeId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TreeName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TreeName)
+            @Html.ValidationMessageFor(model => model.TreeName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ParentId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ParentId)
+            @Html.ValidationMessageFor(model => model.ParentId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SplitType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SplitType)
+            @Html.ValidationMessageFor(model => model.SplitType)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

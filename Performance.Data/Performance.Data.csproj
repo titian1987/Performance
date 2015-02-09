@@ -39,7 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseEnums.cs" />
+    <Compile Include="BaseEnum\User.cs" />
+    <Compile Include="Entity\HoldingTable.cs" />
+    <Compile Include="Entity\InvestmentTree.cs" />
     <Compile Include="Entity\WebUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

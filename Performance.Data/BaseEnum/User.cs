@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Performance.Data
 {
-    public class BaseEnums
+    public class User
     {
         enum UserRole { 
             Administrator = 0,

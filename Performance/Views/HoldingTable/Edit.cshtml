@@ -1,0 +1,110 @@
+﻿@model Performance.Data.Entity.HoldingTable
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>HoldingTable</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SecurityId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SecurityId)
+            @Html.ValidationMessageFor(model => model.SecurityId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SecurityName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SecurityName)
+            @Html.ValidationMessageFor(model => model.SecurityName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PortfolioId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PortfolioId)
+            @Html.ValidationMessageFor(model => model.PortfolioId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PortfolioName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PortfolioName)
+            @Html.ValidationMessageFor(model => model.PortfolioName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ModelPortfolioId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ModelPortfolioId)
+            @Html.ValidationMessageFor(model => model.ModelPortfolioId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ModelPortfolioName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ModelPortfolioName)
+            @Html.ValidationMessageFor(model => model.ModelPortfolioName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nominal)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nominal)
+            @Html.ValidationMessageFor(model => model.Nominal)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MarketValue)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MarketValue)
+            @Html.ValidationMessageFor(model => model.MarketValue)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CashFlow)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CashFlow)
+            @Html.ValidationMessageFor(model => model.CashFlow)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

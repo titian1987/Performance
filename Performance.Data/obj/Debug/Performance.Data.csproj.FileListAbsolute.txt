@@ -3,3 +3,13 @@ C:\Users\yli\Documents\Visual Studio 2013\Projects\Performance\Performance.Data\
 C:\Users\yli\Documents\Visual Studio 2013\Projects\Performance\Performance.Data\obj\Debug\Performance.Data.dll
 C:\Users\yli\Documents\Visual Studio 2013\Projects\Performance\Performance.Data\obj\Debug\Performance.Data.pdb
 C:\Users\yli\Documents\Visual Studio 2013\Projects\Performance\Performance.Data\obj\Debug\Performance.Data.csprojResolveAssemblyReference.cache
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\bin\Debug\Performance.Data.dll
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\bin\Debug\Performance.Data.pdb
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\obj\Debug\Performance.Data.csprojResolveAssemblyReference.cache
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\obj\Debug\Performance.Data.dll
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\obj\Debug\Performance.Data.pdb
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\bin\Debug\Performance.Data.dll.config
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\bin\Debug\EntityFramework.dll
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\bin\Debug\EntityFramework.xml
+C:\Users\ZZG\Documents\GitHub\Performance\Performance.Data\bin\Debug\EntityFramework.SqlServer.xml
